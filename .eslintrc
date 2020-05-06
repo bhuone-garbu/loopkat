@@ -1,0 +1,11 @@
+{
+  "extends": "@bhuone-garbu",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+}
