@@ -1,0 +1,16 @@
+{
+  "presets": ["next/babel"],
+  "env": {
+    "development": {
+      "plugins": [
+        ["babel-plugin-styled-components", { "fileName": false }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        "@babel/plugin-transform-react-inline-elements",
+        ["babel-plugin-styled-components", { "displayName": false }]
+      ]
+    }
+  }
+}
