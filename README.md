@@ -33,7 +33,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ## Deploying
 
-Currently, this project is set to deploy at [ZEIT](https://zeit.co/) and the `now.json` is looking for a secret `@gb_token` that needs to be set on the ZEIT build env.
+Currently, this project is set to deploy at [Vercel](https://vercel.com/) and the `now.json` is looking for a secret `@gb_token` that needs to be set on the Vercel build env. (Vercel used to be called ZEIT)
 
 If not set, use the following command to set the secret:
 ```
@@ -42,6 +42,6 @@ now secrets add gb_token "gh_access_token"
 
 This way, zeit can install packages from the privately held github npm registry.
 
-For more info on `now` cli, head over to [https://zeit.co/docs/now-cli](https://zeit.co/docs/now-cli)
+For more info on `now` cli, head over to [https://vercel.com/docs/now-cli](https://vercel.com/docs/now-cli#introduction/vercel-cli-reference)
 
 Happy coding ✌️
