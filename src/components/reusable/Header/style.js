@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
-import { typographyCursive } from '../../../styles/mixins';
+import { typographyCursive, typographyHeading } from '../../../styles/mixins';
 
 export const HeadingText = styled.span`
+  ${typographyCursive};
   margin: 0;
-  font-size: 4rem;
-  line-height: 1;
+  font-size: 3rem;
 
   &:active {
     color: ${p => p.theme.colors.primary};
     font-weight: bold;
   }
+`;
+
+export const ColoredText = styled.span`
+  ${typographyHeading};
+  /* color: ${p => p.theme.colors.primary}; */
+  /* text-transform: uppercase; */
 `;
 
 export const Body = styled.header`

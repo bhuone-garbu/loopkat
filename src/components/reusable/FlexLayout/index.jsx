@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import { FlexLayoutWrapper } from './style';
 
-const MainContainer = ({ children, flexDirection, stretchHeight, stretchWidth }) => (
+const FlexLayout = ({ children, flexDirection, justifyContent, stretchHeight, stretchWidth }) => (
   <FlexLayoutWrapper
     flexDirection={flexDirection}
+    justifyContent={justifyContent}
     stretchHeight={stretchHeight}
     stretchWidth={stretchWidth}
   >
@@ -13,17 +14,19 @@ const MainContainer = ({ children, flexDirection, stretchHeight, stretchWidth })
   </FlexLayoutWrapper>
 );
 
-MainContainer.propTypes = {
+FlexLayout.propTypes = {
   children: PropTypes.node.isRequired,
   flexDirection: PropTypes.string,
+  justifyContent: PropTypes.string,
   stretchHeight: PropTypes.bool,
   stretchWidth: PropTypes.bool,
 };
 
-MainContainer.defaultProps = {
+FlexLayout.defaultProps = {
   flexDirection: 'column',
+  justifyContent: null,
   stretchHeight: false,
   stretchWidth: false,
 };
 
-export default memo(MainContainer);
+export default memo(FlexLayout);

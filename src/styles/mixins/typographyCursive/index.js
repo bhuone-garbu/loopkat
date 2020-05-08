@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
 
 export default css`
-  font-family: 'Monoton', cursive;
+  font-family: 'Baloo 2', cursive;
 `;

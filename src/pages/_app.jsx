@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     ${typographyRegular}
     color: ${p => p.theme.colors.primary};
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.5;
     background: ${p => p.theme.colors.background};
     background-image: ${p =>
@@ -40,22 +40,25 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3 {
     ${typographyHeading};
     color: ${p => p.theme.colors.secondary};
+    line-height: 1.15;
+  }
+
+  h1, h2, h3, p {
+    margin-top: 1rem;
+    font-weight: normal;
   }
 
   p {
     color: ${p => p.theme.colors.grey};
   }
 
-  h1, h2, h3, p {
-    margin-top: 1rem;
-  }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   h2 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
   }
 `;
 
