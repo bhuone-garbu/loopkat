@@ -6,8 +6,6 @@
     "start": "next dev -p 3100",
     "build": "next build",
     "deploy": "next start",
-    "lint-code": "eslint src",
-    "lint-style": "stylelint src",
     "lint": "eslint src && stylelint src"
   },
   "husky": {
