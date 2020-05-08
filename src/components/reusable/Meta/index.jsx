@@ -20,7 +20,6 @@ const Meta = ({ description, title }) => (
         <meta content={description} name="twitter:description" />
       </>
     )}
-    <link href="/favicon.ico" rel="icon" />
   </Head>
 );
 
