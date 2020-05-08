@@ -1,0 +1,84 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+
+import theme from '../styles/theme';
+import { typographyRegular, typographyHeading } from '../styles/mixins';
+
+import { MainLayout, Meta } from '../components';
+
+const GlobalStyle = createGlobalStyle`
+
+  html {
+    font-size: 62.5%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  body {
+    ${typographyRegular}
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background: ${p => p.theme.colors.white};
+  }
+
+  a, ul, li {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  h1, h2, h3, h4 {
+    ${typographyHeading};
+    margin-top: 1rem;
+    color: ${p => p.theme.colors.secondary};
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+`;
+
+const MyApp = ({ Component, pageProps }) => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <Meta />
+    <MainLayout>
+      <Component {...pageProps} />
+    </MainLayout>
+  </ThemeProvider>
+);
+
+/**
+ * From Nextjs docs
+ * Note that getStaticProps runs only on the server-side. It will never be run on the client-side.
+ * It won’t even be included in the JS bundle for the browser.
+ *
+ * That means you can write code such as direct database queries without them being sent to browsers.
+ * You should not fetch an API route from getStaticProps — instead, you can write the server-side code directly in getStaticProps.
+ */
+MyApp.getStaticProps = async ctx => {
+  const appProps = await MyApp.getStaticProps(ctx);
+  return { ...appProps };
+};
+
+MyApp.propTypes = {
+  Component: PropTypes.func.isRequired,
+  pageProps: PropTypes.shape(),
+};
+
+MyApp.defaultProps = {
+  pageProps: {},
+};
+
+export default MyApp;

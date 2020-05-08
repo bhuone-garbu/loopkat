@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) template project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with the additions of some of linters packages that I use.
+This is a [Nextjs](https://nextjs.org/) template project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with the additions of some of linters packages that I use.
 
 ## Getting started
 
@@ -16,6 +16,7 @@ Create your own `~/.npmrc` and populate it with the following.
 @bhuone-garbu:registry=https://npm.pkg.github.com
 ```
 
+For semantic reason, this template requires `.jsx` or `.tsx` to be used as file extension for React.
 
 ## Running
 
