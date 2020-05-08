@@ -11,7 +11,7 @@ const Header = () => (
       <Body>
         <Link href="/" replace>
           <a>
-            <HeadingText>Journey</HeadingText>
+            <HeadingText>Loopkat</HeadingText>
           </a>
         </Link>
       </Body>

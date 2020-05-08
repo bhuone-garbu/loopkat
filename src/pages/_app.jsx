@@ -6,7 +6,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import theme from '../styles/theme';
 import { typographyRegular, typographyHeading } from '../styles/mixins';
 
-import { MainLayout, Meta } from '../components';
+import { Header, MainLayout } from '../components/reusable';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -23,37 +23,47 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     ${typographyRegular}
+    color: ${p => p.theme.colors.primary};
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.5;
-    background: ${p => p.theme.colors.white};
+    background: ${p => p.theme.colors.background};
+    background-image: ${p =>
+      `radial-gradient(${p.theme.colors.white}, ${p.theme.colors.background})`};
   }
 
   a, ul, li {
-    color: currentColor;
+    color: ${p => p.theme.colors.red};
     text-decoration: none;
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3 {
     ${typographyHeading};
-    margin-top: 1rem;
     color: ${p => p.theme.colors.secondary};
   }
 
+  p {
+    color: ${p => p.theme.colors.grey};
+  }
+
+  h1, h2, h3, p {
+    margin-top: 1rem;
+  }
+
   h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
 `;
 
 const MyApp = ({ Component, pageProps }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
-    <Meta />
     <MainLayout>
+      <Header />
       <Component {...pageProps} />
     </MainLayout>
   </ThemeProvider>

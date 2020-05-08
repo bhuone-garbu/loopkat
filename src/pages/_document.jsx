@@ -38,7 +38,7 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link href="/favicon.ico" rel="shortcut icon" />
           <link
-            href="https://fonts.googleapis.com/css?family=Biryani:400,700|Montserrat:400,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Monoton|Biryani:400,700|Montserrat:400,700&display=swap"
             rel="stylesheet"
           />
         </Head>
