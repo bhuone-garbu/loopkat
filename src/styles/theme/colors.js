@@ -9,7 +9,7 @@ export default {
   primary: '#E85A4F',
   blue: '#313D4B',
   red: '#E85A4F',
-  redLight: '#98074',
+  redLight: '#E98074',
   white: '#FFFFFF',
   yellow: '#feb300',
 };

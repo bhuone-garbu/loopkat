@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     ${typographyRegular}
-    color: ${p => p.theme.colors.primary};
+    color: ${p => p.theme.colors.blue};
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.5;
