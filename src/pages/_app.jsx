@@ -27,9 +27,9 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.5;
-    background: ${p => p.theme.colors.background};
+    /* background: ${p => p.theme.colors.background};
     background-image: ${p =>
-      `radial-gradient(${p.theme.colors.white}, ${p.theme.colors.background})`};
+      `radial-gradient(${p.theme.colors.white}, ${p.theme.colors.background})`}; */
   }
 
   a, ul, li {
@@ -39,17 +39,18 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3 {
     ${typographyHeading};
-    color: ${p => p.theme.colors.secondary};
+    color: ${p => p.theme.colors.blue};
     line-height: 1.15;
   }
 
   h1, h2, h3, p {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     font-weight: normal;
   }
 
   p {
     color: ${p => p.theme.colors.grey};
+    font-size: 1.8rem;
   }
 
 
@@ -58,7 +59,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
   }
 `;
 

@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 
 import { FlexLayout, Meta } from '../reusable';
 
-import { CardWrapper, ImageStyled, Main, ParagraphWrapper, SpanStyled } from './style';
+import {
+  CardWrapper,
+  Column,
+  ColumnWrapper,
+  ImageStyled,
+  Main,
+  SectionWrapper,
+  SpanStyled,
+} from './style';
 
 const StartPage = ({ description, title }) => {
   return (
@@ -13,17 +21,35 @@ const StartPage = ({ description, title }) => {
         <h1>
           Welcome to <SpanStyled>Loopkat</SpanStyled>
         </h1>
-        <ParagraphWrapper>
-          <p>How can we help you?</p>
-        </ParagraphWrapper>
-        <CardWrapper>
-          <h2>Discover</h2>
-          <ImageStyled alt="earth" src="/images/earth.svg" />
-        </CardWrapper>
-        <CardWrapper>
-          <h2>Plan</h2>
-          <ImageStyled alt="earth" src="/images/trip-plan.svg" />
-        </CardWrapper>
+        <p>
+          <SpanStyled>Loopkat</SpanStyled> provides personalised and curated travel inspiration in
+          one place.
+        </p>
+        <p>No more wading through reviews, blogposts or travel forums.</p>
+
+        <SectionWrapper>
+          <h2>How can we help you?</h2>
+          <ColumnWrapper>
+            <Column>
+              <p>Wondering where to go?</p>
+              <a href="/start/discover">
+                <CardWrapper>
+                  <h3>Discover &rarr;</h3>
+                  <ImageStyled alt="earth" src="/images/earth.svg" />
+                </CardWrapper>
+              </a>
+            </Column>
+            <Column>
+              <p>Have a place in mind?</p>
+              <a href="/start/discover">
+                <CardWrapper>
+                  <h3>Plan &rarr;</h3>
+                  <ImageStyled alt="earth" src="/images/trip-plan-2.svg" />
+                </CardWrapper>
+              </a>
+            </Column>
+          </ColumnWrapper>
+        </SectionWrapper>
       </Main>
     </FlexLayout>
   );

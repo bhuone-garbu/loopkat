@@ -5,6 +5,7 @@ import { typographyCursive, typographyHeading } from '../../../styles/mixins';
 export const HeadingText = styled.span`
   ${typographyCursive};
   margin: 0;
+  color: ${p => p.theme.colors.red};
   font-size: 3rem;
 
   &:active {

@@ -2,11 +2,9 @@ This is a [Nextjs](https://nextjs.org/) template project bootstrapped with [`cre
 
 ## Getting started
 
-Recommended Editor: VSCode
+Recommended Editor: [VSCode](https://code.visualstudio.com/)
 
 Currently some of the config packages are held in Github private package registry for the scoped packages `@bhuone-garbu`
-
-Google if u need help setting up a environmental variable on your choice of operating system.
 
 Request a github access token to [bhuone-garbu](https://github.com/bhuone-garbu)
 
@@ -16,7 +14,7 @@ Create your own `~/.npmrc` and populate it with the following.
 @bhuone-garbu:registry=https://npm.pkg.github.com
 ```
 
-For semantic reason, this template requires `.jsx` or `.tsx` to be used as file extension for React.
+For semantic reason, this template makes use of `.jsx` or `.tsx` as file extension for React.
 
 ## Running
 
@@ -29,7 +27,7 @@ npm run start
 
 Open [http://localhost:3100](http://localhost:3100) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/pages/index.jsx`. The page auto-updates as you edit the file.
 
 
 ## Deploying

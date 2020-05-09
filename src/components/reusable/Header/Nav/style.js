@@ -4,7 +4,7 @@ export const ListItem = styled.li`
   list-style: none;
 
   &:active {
-    color: ${p => p.theme.colors.secondary};
+    color: ${p => p.theme.colors.blue};
     font-weight: 700;
   }
 `;
