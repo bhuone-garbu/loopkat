@@ -16,7 +16,7 @@ const ShareJourney = () => {
     <FlexLayout stretchWidth>
       <FormStyled>
         <FormTitle>Let&apos;s start</FormTitle>
-        <HelpSubtitle>Your input preferences help make recommendation even better!</HelpSubtitle>
+        <HelpSubtitle>Your preferences will help make recommendations even better!</HelpSubtitle>
 
         <QuestionWrapper>
           <QuestionTitle>Where are you going?</QuestionTitle>

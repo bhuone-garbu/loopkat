@@ -32,7 +32,7 @@ const StartPage = ({ description, title }) => {
           <ColumnWrapper>
             <Column>
               <p>Wondering where to go?</p>
-              <a href="/start/discover">
+              <a href="/start/preferences">
                 <CardWrapper>
                   <h3>Discover &rarr;</h3>
                   <ImageStyled alt="earth" src="/images/earth.svg" />
@@ -41,7 +41,7 @@ const StartPage = ({ description, title }) => {
             </Column>
             <Column>
               <p>Have a place in mind?</p>
-              <a href="/start/discover">
+              <a href="/start/preferences">
                 <CardWrapper>
                   <h3>Plan &rarr;</h3>
                   <ImageStyled alt="earth" src="/images/trip-plan-2.svg" />

@@ -41,6 +41,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Baloo+2:400|Biryani:400,700|Montserrat:500,700&display=swap"
             rel="stylesheet"
           />
+          <script crossOrigin="anonymous" src="https://kit.fontawesome.com/802a2035bb.js" />
         </Head>
         <body>
           <Main />

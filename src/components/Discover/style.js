@@ -28,7 +28,6 @@ export const QuestionTitle = styled.h3`
 export const HelpSubtitle = styled.p`
   color: ${p => p.theme.colors.greyLight};
   font-weight: 700;
-  font-size: 0.9em;
 `;
 
 export const QuestionInputWrapper = styled.div`
