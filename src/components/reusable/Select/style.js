@@ -36,6 +36,7 @@ export const SelectStyled = styled.select`
   ${resetSelect};
   flex-grow: 1;
   padding: 0 1rem;
+  color: ${p => p.theme.colors.grey};
   font-size: 1.8rem;
 `;
 

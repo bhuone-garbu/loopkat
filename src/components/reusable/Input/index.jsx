@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { InputStyled } from './style';
 
-const Input = ({ isDisabled, maxLength, name, placeholder, type, label, stretch }) => {
+const Input = ({ isDisabled, maxLength, name, placeholder, type, label, stretch, value }) => {
+  const [currentValue, setCurrentValue] = useState(value);
+
   return (
     <InputStyled
       isDisabled={isDisabled}
       label={label}
       maxLength={maxLength}
       name={name}
+      onChange={e => setCurrentValue(e.target.value)}
       placeholder={placeholder}
       stretch={stretch}
       type={type}
+      value={currentValue}
     />
   );
 };
@@ -25,6 +29,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   stretch: PropTypes.bool,
   type: PropTypes.oneOf(['email', 'number', 'search', 'text']),
+  value: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -34,6 +39,7 @@ Input.defaultProps = {
   placeholder: null,
   stretch: false,
   type: 'text',
+  value: '',
 };
 
 export default Input;

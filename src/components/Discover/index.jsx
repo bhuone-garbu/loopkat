@@ -3,12 +3,14 @@ import React from 'react';
 import { FlexLayout, Input, MultiBlockSelect, Select } from '../reusable';
 
 import {
+  ButtonContainer,
+  ButtonStyled,
   FormStyled,
   FormTitle,
-  HelpSubtitle,
   QuestionWrapper,
   QuestionTitle,
   QuestionInputWrapper,
+  ResponsiveAnchor,
 } from './style';
 
 const ShareJourney = () => {
@@ -16,7 +18,7 @@ const ShareJourney = () => {
     <FlexLayout stretchWidth>
       <FormStyled>
         <FormTitle>Let&apos;s start</FormTitle>
-        <HelpSubtitle>Your preferences will help make recommendations even better!</HelpSubtitle>
+        <p>Your preferences will help make recommendations even better!</p>
 
         <QuestionWrapper>
           <QuestionTitle>Where are you going?</QuestionTitle>
@@ -28,8 +30,9 @@ const ShareJourney = () => {
         <QuestionWrapper>
           <QuestionTitle>How long are you traveling?</QuestionTitle>
           <QuestionInputWrapper>
-            <Input maxLength={2} name="tripPlace" placeholder="10" type="number" />
+            <Input maxLength={2} name="tripLength" placeholder="10" type="number" />
             <Select
+              name="tripUnit"
               options={[
                 { label: 'Day(s)', value: 'days' },
                 { label: 'Week(s)', value: 'weeks' },
@@ -55,6 +58,12 @@ const ShareJourney = () => {
             />
           </QuestionInputWrapper>
         </QuestionWrapper>
+
+        <ButtonContainer>
+          <ResponsiveAnchor href="/start/places">
+            <ButtonStyled>Next</ButtonStyled>
+          </ResponsiveAnchor>
+        </ButtonContainer>
       </FormStyled>
     </FlexLayout>
   );

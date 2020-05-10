@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import { Option, SelectStyled, Wrapper } from './style';
 
-const Select = ({ options, stretch }) => {
+const Select = ({ name, options, stretch }) => {
   return (
     <Wrapper stretch={stretch}>
-      <SelectStyled>
+      <SelectStyled name={name}>
         {options.map(option => (
           <Option key={option.value} value={option.value}>
             {option.label}
@@ -18,6 +18,7 @@ const Select = ({ options, stretch }) => {
 };
 
 Select.propTypes = {
+  name: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.object).isRequired,
   stretch: PropTypes.bool,
 };

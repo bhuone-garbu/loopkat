@@ -8,16 +8,16 @@ export const Grid = styled.div`
 
 export const GridItem = styled.div`
   padding: 2rem;
+  color: ${p => p.theme.colors.grey};
   font-size: 2rem;
-  border: ${p => p.theme.fields.borderSize} solid ${p => p.theme.colors.grey};
+  border: ${p => p.theme.fields.borderSize} solid ${p => p.theme.colors.greyLight};
   border-radius: ${p => p.theme.fields.borderRadius};
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: color 0.1s ease, border-color 0.2s ease, transform 0.2s ease;
 
   &:hover,
   &:focus {
-    border-color: ${p => !p.isSelected && p.theme.colors.grey};
     transform: ${p => !p.isSelected && 'scale(1.02)'};
   }
 
@@ -30,7 +30,7 @@ export const GridItem = styled.div`
     css`
       color: ${p.theme.colors.white};
       font-weight: 700;
-      background: ${p.theme.colors.primary};
+      background: ${p.theme.colors.blue};
       transform: scale(0.95);
     `};
 `;

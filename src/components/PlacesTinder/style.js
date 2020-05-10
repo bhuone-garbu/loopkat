@@ -7,6 +7,7 @@ export const Wrapper = styled.section`
 `;
 
 export const DescriptionWrapper = styled.p`
+  color: ${p => p.theme.colors.black};
   text-align: left;
 `;
 
@@ -40,8 +41,9 @@ export const PictureCardWrapper = styled.div`
   width: 100%;
   padding-bottom: 100%;
   background: ${p => p.theme.colors.white};
-  border: 1px solid ${p => p.theme.colors.grey};
-  border-radius: 1rem;
+  border: 1px solid ${p => p.theme.colors.greyLight};
+  border-radius: ${p => p.theme.fields.borderRadius};
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
   transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 
   ${p => css`

@@ -47,14 +47,13 @@ export const CardWrapper = styled.div`
   height: auto;
   padding: 1rem;
   text-align: left;
-  border: 1px solid ${p => p.theme.colors.grey};
-  border-radius: 1rem;
+  border: 1px solid ${p => p.theme.colors.greyLight};
+  border-radius: ${p => p.theme.fields.borderRadius};
   cursor: pointer;
   transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 
   &:hover,
   &:focus {
-    border-color: ${p => p.theme.colors.grey};
     transform: scale(1.02);
   }
 

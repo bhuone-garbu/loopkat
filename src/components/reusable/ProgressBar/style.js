@@ -7,12 +7,12 @@ export const ProgressWrapper = styled.div`
   margin: 0 auto;
   background-color: ${p => p.theme.colors.greyLighter};
   border: ${p => p.theme.fields.borderSize} solid ${p => p.theme.colors.blue};
-  border-radius: calc(${p => p.theme.fields.borderRadius} * 1.5);
+  border-radius: ${p => p.theme.fields.borderRadius};
 `;
 
 export const ProgressBarWrapper = styled.div`
   width: ${p => p.percentage}%;
   min-height: 1.5rem;
   background-color: ${p => p.theme.colors.primary};
-  border-radius: calc(${p => p.theme.fields.borderRadius});
+  border-radius: calc(${p => p.theme.fields.borderRadius} / 2);
 `;
