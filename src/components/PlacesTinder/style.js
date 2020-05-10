@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const CONTAINER_MAX_WIDTH = '65rem';
+export const CONTAINER_MAX_WIDTH = '65rem';
 export const SQUARE_MAX_WIDTH = '45rem';
 
 export const Wrapper = styled.section`
@@ -83,10 +83,14 @@ export const ActionWrapper = styled.section`
 `;
 
 export const Action = styled.div`
-  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.2rem;
+  height: 7.2rem;
+  padding: 2rem;
   color: ${p => p.theme.colors.white};
   background: ${p => p.bgColor};
-  /* border: 3px solid ${p => p.theme.colors.blue}; */
   border-radius: 50%;
   box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -106,3 +110,14 @@ export const Action = styled.div`
 export const BackAction = styled(Action)`
   color: currentColor;
 `;
+
+export const ResponsiveAnchor = styled.a(
+  p => css`
+    display: inline-block;
+    margin: 2rem auto;
+
+    @media screen and (max-width: ${p.theme.breakpoints.mobileLarge.breakpoint}) {
+      width: 100%;
+    }
+  `,
+);

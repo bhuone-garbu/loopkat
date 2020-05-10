@@ -15,6 +15,7 @@ import {
   InfoWrapper,
   LocationContentWrapper,
   ParagraphStyled,
+  ResponsiveAnchor,
   SpanStyled,
   SquareCard,
   SquareMaker,
@@ -27,7 +28,7 @@ const PlaceTinder = ({ activities, destination, totalDays }) => {
   const first = activities[0];
   const filledDays = 2;
   return (
-    <FlexLayout justifyContent="center" stretchHeight stretchWidth>
+    <FlexLayout stretchHeight stretchWidth>
       <Wrapper>
         <h1>
           Your trip to <SpanStyled>{destination}</SpanStyled>
@@ -55,17 +56,19 @@ const PlaceTinder = ({ activities, destination, totalDays }) => {
 
         <ActionWrapper>
           <Action bgColor={colors.redLight}>
-            <i className="fas fa-thumbs-down fa-2x" />
+            <i className="fas fa-thumbs-down fa-3x" />
           </Action>
           <BackAction bgColor={colors.greyLighter}>
-            <i className="fas fa-undo-alt fa-2x" />
+            <i className="fas fa-step-backward fa-2x" />
           </BackAction>
           <Action bgColor={colors.green}>
-            <i className="fas fa-thumbs-up fa-2x" />
+            <i className="fas fa-thumbs-up fa-3x" />
           </Action>
         </ActionWrapper>
 
-        <Button value="Done" />
+        <ResponsiveAnchor href="/discover/results">
+          <Button value="Done" />
+        </ResponsiveAnchor>
       </Wrapper>
     </FlexLayout>
   );
