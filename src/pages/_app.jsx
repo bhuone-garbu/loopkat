@@ -27,9 +27,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 1.5;
-    /* background: ${p => p.theme.colors.yellow}; */
-    /* background-image: ${p =>
-      `radial-gradient(${p.theme.colors.white}, ${p.theme.colors.yellow})`}; */
   }
 
   a, ul, li {
@@ -52,10 +49,11 @@ const GlobalStyle = createGlobalStyle`
 
 
   h1 {
-    font-size: 2.6rem;
+    font-weight: 700;
+    font-size: 2.4rem;
   }
 
-  h2 {
+  h1, h2 {
     font-size: 2.2rem;
   }
 

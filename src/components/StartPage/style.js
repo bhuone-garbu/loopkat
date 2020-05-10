@@ -5,8 +5,9 @@ export const SpanStyled = styled.span`
 `;
 
 export const ImageStyled = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  max-width: 25rem;
+  height: 70%;
   max-height: 25rem;
   object-fit: cover;
   border-radius: 5px;
@@ -17,29 +18,27 @@ export const SectionWrapper = styled.section`
   margin-top: 3rem;
 `;
 
-export const ColumnWrapper = styled.div`
-  width: 100%;
-  max-width: 70rem;
+export const GridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  gap: 4rem;
   margin: 0 auto;
-`;
-
-export const Column = styled.article`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 40%;
-  margin: 0 auto 2rem auto;
 
   ${p => css`
     @media screen and (max-width: ${p.theme.breakpoints.mobileLarge.breakpoint}) {
-      display: flex;
+      display: block;
       width: 100%;
     }
   `}
 `;
 
+export const GridItem = styled.article`
+  width: 100%;
+  margin: 0 auto 2rem auto;
+`;
+
 export const CardWrapper = styled.div`
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -47,6 +46,7 @@ export const CardWrapper = styled.div`
   height: auto;
   padding: 1rem;
   text-align: left;
+  background: ${p => p.theme.colors.greyLighter};
   border: 1px solid ${p => p.theme.colors.greyLight};
   border-radius: ${p => p.theme.fields.borderRadius};
   cursor: pointer;
@@ -62,17 +62,11 @@ export const CardWrapper = styled.div`
   }
 
   /* ${p => css`
-    @media screen and (max-width: ${p.theme.breakpoints.tablet.breakpoint}) {
-      width: 20rem;
-    }
-  `} */
-
-  ${p => css`
     @media screen and (max-width: ${p.theme.breakpoints.mobileLarge.breakpoint}) {
       width: 100%;
       height: auto;
     }
-  `}
+  `} */
 `;
 
 export const Main = styled.main`

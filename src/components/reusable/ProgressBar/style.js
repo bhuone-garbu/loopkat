@@ -12,7 +12,7 @@ export const ProgressWrapper = styled.div`
 
 export const ProgressBarWrapper = styled.div`
   width: ${p => p.percentage}%;
-  min-height: 1.5rem;
+  min-height: 1rem;
   background-color: ${p => p.theme.colors.primary};
   border-radius: calc(${p => p.theme.fields.borderRadius} / 2);
 `;

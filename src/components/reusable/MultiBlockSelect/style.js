@@ -9,7 +9,8 @@ export const Grid = styled.div`
 export const GridItem = styled.div`
   padding: 2rem;
   color: ${p => p.theme.colors.grey};
-  font-size: 2rem;
+  /* font-size: 0.95em; */
+  background: ${p => p.theme.colors.greyLighter};
   border: ${p => p.theme.fields.borderSize} solid ${p => p.theme.colors.greyLight};
   border-radius: ${p => p.theme.fields.borderRadius};
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
@@ -18,6 +19,8 @@ export const GridItem = styled.div`
 
   &:hover,
   &:focus {
+    color: ${p => p.theme.colors.white};
+    background: ${p => p.theme.colors.blue};
     transform: ${p => !p.isSelected && 'scale(1.02)'};
   }
 
@@ -29,7 +32,6 @@ export const GridItem = styled.div`
     p.isSelected &&
     css`
       color: ${p.theme.colors.white};
-      font-weight: 700;
       background: ${p.theme.colors.blue};
       transform: scale(0.95);
     `};

@@ -5,8 +5,8 @@ import { FlexLayout, Meta } from '../reusable';
 
 import {
   CardWrapper,
-  Column,
-  ColumnWrapper,
+  GridItem,
+  GridWrapper,
   ImageStyled,
   Main,
   SectionWrapper,
@@ -29,26 +29,26 @@ const StartPage = ({ description, title }) => {
 
         <SectionWrapper>
           <h2>How can we help you?</h2>
-          <ColumnWrapper>
-            <Column>
+          <GridWrapper>
+            <GridItem>
               <p>Wondering where to go?</p>
-              <a href="/start/preferences">
+              <a href="/discover/preferences">
                 <CardWrapper>
                   <h3>Discover &rarr;</h3>
                   <ImageStyled alt="earth" src="/images/earth.svg" />
                 </CardWrapper>
               </a>
-            </Column>
-            <Column>
+            </GridItem>
+            <GridItem>
               <p>Have a place in mind?</p>
-              <a href="/start/preferences">
+              <a href="/discover/preferences">
                 <CardWrapper>
                   <h3>Plan &rarr;</h3>
                   <ImageStyled alt="earth" src="/images/trip-plan-2.svg" />
                 </CardWrapper>
               </a>
-            </Column>
-          </ColumnWrapper>
+            </GridItem>
+          </GridWrapper>
         </SectionWrapper>
       </Main>
     </FlexLayout>

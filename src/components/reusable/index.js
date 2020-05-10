@@ -1,3 +1,4 @@
+export { default as Button } from './Button';
 export { default as FlexLayout } from './FlexLayout';
 export { default as Header } from './Header';
 export { default as Input } from './Input';

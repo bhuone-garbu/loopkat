@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { FlexLayout, ProgressBar } from '../reusable';
+import { Button, FlexLayout, ProgressBar } from '../reusable';
 
 import {
+  ActionWrapper,
   DescriptionWrapper,
   ImageStyled,
+  ImageWrapper,
+  InfoWrapper,
+  LocationContentWrapper,
   ParagraphStyled,
-  PictureCardWrapper,
-  Square,
+  SpanStyled,
+  SquareCard,
+  SquareMaker,
+  SQUARE_MAX_WIDTH,
   Title,
   Wrapper,
 } from './style';
@@ -19,20 +25,37 @@ const PlaceTinder = ({ activities, destination, totalDays }) => {
   return (
     <FlexLayout justifyContent="center" stretchHeight stretchWidth>
       <Wrapper>
-        <h1>Your trip to {destination}</h1>
-        <ProgressBar maxWidth="40rem" percentage={50} />
+        <h1>
+          Your trip to <SpanStyled>{destination}</SpanStyled>
+        </h1>
+        <ProgressBar maxWidth={SQUARE_MAX_WIDTH} percentage={50} />
         <ParagraphStyled>
           {filledDays}/{totalDays} days filled
         </ParagraphStyled>
 
-        <Title>{first.title}</Title>
-        <Square>
-          <PictureCardWrapper>
-            <ImageStyled src={first.image} />
-          </PictureCardWrapper>
-        </Square>
+        <SquareCard>
+          <SquareMaker>
+            <LocationContentWrapper>
+              <ImageWrapper>
+                <ImageStyled src={first.image} />
+              </ImageWrapper>
+              <InfoWrapper>
+                <Title>{first.title}</Title>
+                <DescriptionWrapper>
+                  <p>{first.description}</p>
+                </DescriptionWrapper>
+              </InfoWrapper>
+            </LocationContentWrapper>
+          </SquareMaker>
+        </SquareCard>
 
-        <DescriptionWrapper>{first.description}</DescriptionWrapper>
+        <ActionWrapper>
+          <p>Dislike</p>
+          <p>Back</p>
+          <p>Like</p>
+        </ActionWrapper>
+
+        <Button value="Done" />
       </Wrapper>
     </FlexLayout>
   );
