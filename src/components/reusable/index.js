@@ -6,6 +6,7 @@ export { default as MainLayout } from './MainLayout';
 export { default as Meta } from './Meta';
 export { default as MultiSelect } from './MultiSelect';
 export { default as MultiBlockSelect } from './MultiBlockSelect';
+export { default as ProgressBar } from './ProgressBar';
 export { default as RadioSelect } from './RadioSelect';
 export { default as Select } from './Select';
 export { default as SliderInput } from './SliderInput';

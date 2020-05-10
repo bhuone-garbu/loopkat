@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const SpanStyled = styled.span`
-  color: ${p => p.theme.colors.red};
+  color: ${p => p.theme.colors.primary};
 `;
 
 export const ImageStyled = styled.img`
@@ -13,6 +13,7 @@ export const ImageStyled = styled.img`
 `;
 
 export const SectionWrapper = styled.section`
+  padding-top: 2rem;
   margin-top: 3rem;
 `;
 
@@ -27,7 +28,7 @@ export const Column = styled.article`
   flex-direction: column;
   justify-content: space-around;
   width: 40%;
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
 
   ${p => css`
     @media screen and (max-width: ${p.theme.breakpoints.mobileLarge.breakpoint}) {
@@ -46,7 +47,7 @@ export const CardWrapper = styled.div`
   height: auto;
   padding: 1rem;
   text-align: left;
-  border: 1px solid ${p => p.theme.colors.brown};
+  border: 1px solid ${p => p.theme.colors.grey};
   border-radius: 1rem;
   cursor: pointer;
   transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;

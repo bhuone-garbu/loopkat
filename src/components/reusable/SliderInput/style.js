@@ -38,7 +38,7 @@ export const InputRangeStyled = styled.input`
     ${p => p.theme.colors.greyLighter} ${p => p.percentComplete}%,
     ${p => p.theme.colors.greyLighter} 100%
   );
-  border-radius: 5px;
+  border-radius: ${p => p.theme.fields.borderRadius};
   outline: none;
   cursor: pointer;
 

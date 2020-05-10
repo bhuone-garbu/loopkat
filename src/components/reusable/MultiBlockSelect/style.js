@@ -8,11 +8,12 @@ export const Grid = styled.div`
 
 export const GridItem = styled.div`
   padding: 2rem;
+  font-size: 2rem;
   border: ${p => p.theme.fields.borderSize} solid ${p => p.theme.colors.grey};
   border-radius: ${p => p.theme.fields.borderRadius};
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition: color 0.1s ease, border-color 0.2s ease, transform 0.2s ease;
 
   &:hover,
   &:focus {
@@ -29,7 +30,7 @@ export const GridItem = styled.div`
     css`
       color: ${p.theme.colors.white};
       font-weight: 700;
-      background: ${p.theme.colors.red};
+      background: ${p.theme.colors.primary};
       transform: scale(0.95);
     `};
 `;

@@ -25,45 +25,42 @@ const GlobalStyle = createGlobalStyle`
     ${typographyRegular}
     color: ${p => p.theme.colors.blue};
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 1.5;
-    /* background: ${p => p.theme.colors.background};
-    background-image: ${p =>
-      `radial-gradient(${p.theme.colors.white}, ${p.theme.colors.background})`}; */
+    /* background: ${p => p.theme.colors.yellow}; */
+    /* background-image: ${p =>
+      `radial-gradient(${p.theme.colors.white}, ${p.theme.colors.yellow})`}; */
   }
 
   a, ul, li {
-    color: ${p => p.theme.colors.red};
+    color: ${p => p.theme.colors.primary};
     text-decoration: none;
   }
 
   h1, h2, h3 {
     ${typographyHeading};
-    color: ${p => p.theme.colors.blue};
+    margin-top: 1.5rem;
+    font-weight: normal;
     line-height: 1.15;
   }
 
-  h1, h2, h3, p {
-    margin-top: 1.5rem;
-    font-weight: normal;
-  }
-
   p {
+    margin-top: 1.5rem;
     color: ${p => p.theme.colors.grey};
     font-size: 1.8rem;
   }
 
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 2.6rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   h3 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 `;
 

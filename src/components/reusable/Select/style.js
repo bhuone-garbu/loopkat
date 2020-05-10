@@ -36,7 +36,7 @@ export const SelectStyled = styled.select`
   ${resetSelect};
   flex-grow: 1;
   padding: 0 1rem;
-  font-size: 0.9em;
+  font-size: 1.8rem;
 `;
 
 export const Option = styled.option`
