@@ -8,6 +8,7 @@ import {
   QuestionWrapper,
   QuestionTitle,
   QuestionInputWrapper,
+  ResponsiveAnchor,
 } from './style';
 
 const ShareJourney = () => {
@@ -45,7 +46,7 @@ const ShareJourney = () => {
 
         <QuestionWrapper>
           <QuestionTitle>What are you most interested in?</QuestionTitle>
-          <p>Click multiple options</p>
+          <p>Select multiple options</p>
           <QuestionInputWrapper>
             <MultiBlockSelect
               options={[
@@ -62,9 +63,9 @@ const ShareJourney = () => {
         </QuestionWrapper>
       </FormStyled>
 
-      <a href="/discover/places">
-        <Button value="Next" />
-      </a>
+      <ResponsiveAnchor href="/discover/places">
+        <Button stretch value="Next" />
+      </ResponsiveAnchor>
     </FlexLayout>
   );
 };

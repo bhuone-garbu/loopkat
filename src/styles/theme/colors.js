@@ -7,9 +7,10 @@ export default {
   greyLight: '#CACACA',
   greyLighter: '#FBFBFB',
   primary: '#FB5043',
-  blue: '#313D4B',
   red: '#FB5043',
   redLight: '#E98074',
+  blue: '#313D4B',
+  green: '#5B965B',
   white: '#FFFFFF',
   yellow: '#feb300',
 };

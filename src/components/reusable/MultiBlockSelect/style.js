@@ -9,7 +9,8 @@ export const Grid = styled.div`
 export const GridItem = styled.div`
   padding: 2rem;
   color: ${p => p.theme.colors.grey};
-  /* font-size: 0.95em; */
+  font-size: 1.6rem;
+  text-align: center;
   background: ${p => p.theme.colors.greyLighter};
   border: ${p => p.theme.fields.borderSize} solid ${p => p.theme.colors.greyLight};
   border-radius: ${p => p.theme.fields.borderRadius};

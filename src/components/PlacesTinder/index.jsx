@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 
 import { Button, FlexLayout, ProgressBar } from '../reusable';
 
+import colors from '../../styles/theme/colors';
+
 import {
+  Action,
   ActionWrapper,
+  BackAction,
   DescriptionWrapper,
   ImageStyled,
   ImageWrapper,
@@ -50,9 +54,15 @@ const PlaceTinder = ({ activities, destination, totalDays }) => {
         </SquareCard>
 
         <ActionWrapper>
-          <p>Dislike</p>
-          <p>Back</p>
-          <p>Like</p>
+          <Action bgColor={colors.redLight}>
+            <i className="fas fa-thumbs-down fa-2x" />
+          </Action>
+          <BackAction bgColor={colors.greyLighter}>
+            <i className="fas fa-undo-alt fa-2x" />
+          </BackAction>
+          <Action bgColor={colors.green}>
+            <i className="fas fa-thumbs-up fa-2x" />
+          </Action>
         </ActionWrapper>
 
         <Button value="Done" />

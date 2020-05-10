@@ -14,13 +14,6 @@ export const SpanStyled = styled.span`
   color: ${p => p.theme.colors.primary};
 `;
 
-export const ActionWrapper = styled.section`
-  display: flex;
-  justify-content: space-between;
-  max-width: ${SQUARE_MAX_WIDTH};
-  margin: 0 auto;
-`;
-
 export const ParagraphStyled = styled.p`
   margin: 0;
 `;
@@ -67,7 +60,7 @@ export const LocationContentWrapper = styled.div`
 export const SquareCard = styled.div`
   width: 100%;
   max-width: ${SQUARE_MAX_WIDTH};
-  margin: 0 auto 3.5rem;
+  margin: 0 auto;
 `;
 
 export const SquareMaker = styled.div`
@@ -79,4 +72,37 @@ export const SquareMaker = styled.div`
   border-radius: ${p => p.theme.fields.borderRadius};
   box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
   transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+`;
+
+export const ActionWrapper = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: ${SQUARE_MAX_WIDTH};
+  margin: 2.5rem auto 0;
+`;
+
+export const Action = styled.div`
+  padding: 2.5rem;
+  color: ${p => p.theme.colors.white};
+  background: ${p => p.bgColor};
+  /* border: 3px solid ${p => p.theme.colors.blue}; */
+  border-radius: 50%;
+  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+
+  &:active {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(0.95);
+  }
+`;
+
+export const BackAction = styled(Action)`
+  color: currentColor;
 `;

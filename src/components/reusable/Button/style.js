@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { resetButton, typographyHeading } from '../../../styles/mixins';
 
 export const ButtonContainer = styled.div`
+  display: inline-block;
   width: ${p => p.stretch && '100%'};
   margin: 2rem auto;
 `;
