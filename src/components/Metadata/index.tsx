@@ -1,13 +1,13 @@
+import React from 'react';
+
 import Head from 'next/head';
-import React, { memo } from 'react';
 
 interface Props {
   description?: string;
-  hideFromBots?: boolean;
   title?: string;
 }
 
-const Metadata = ({ description, hideFromBots, title }: Props) => (
+const Metadata = ({ description, title }: Props) => (
   <Head>
     {title && (
       <>
@@ -24,15 +24,13 @@ const Metadata = ({ description, hideFromBots, title }: Props) => (
         <meta content={description} name="twitter:description" />
       </>
     )}
-
-    {hideFromBots && <meta content="noindex, follow" name="robots" />}
+    <link href="/favicon.ico" rel="icon" />
   </Head>
 );
 
 Metadata.defaultProps = {
-  description: undefined,
-  hideFromBots: false,
-  title: undefined,
+  description: null,
+  title: null,
 };
 
-export default memo(Metadata);
+export default Metadata;

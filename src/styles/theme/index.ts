@@ -2,8 +2,12 @@ import colors from './colors';
 import fields from './fields';
 import breakpoints from './breakpoints';
 
-export default {
+import { Theme } from '../../types/styled';
+
+const theme: Theme = {
   breakpoints,
   colors,
   fields,
 };
+
+export default theme;
