@@ -1,6 +1,5 @@
 // import original module declaration
 import 'styled-components';
-import theme from '../styles/theme'
 
 export type Theme = {
   breakpoints: any;
