@@ -1,0 +1,7 @@
+*.code-workspace
+*.log
+.DS_Store
+.env
+.next/
+node_modules/
+out/
