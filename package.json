@@ -3,45 +3,49 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "next dev -p 3100",
+    "dev": "next dev -p 3100",
     "build": "next build",
-    "deploy": "next start",
-    "lint": "eslint src && stylelint src"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "start": "next start",
+    "export": "next export",
+    "clean": "rimraf .next out",
+    "test": "jest",
+    "typescript": "tsc --noEmit",
+    "stylelint": "stylelint 'src/**/*.ts'",
+    "eslint": "eslint --ext .js, .jsx, .ts, .tsx .",
+    "lint": "npm run typescript && npm run eslint && npm run stylelint"
   },
   "dependencies": {
-    "next": "9.3.6",
-    "prop-types": "^15.7.2",
+    "next": "9.4.0",
+    "next-with-apollo": "5.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "5.1.0",
+    "validator": "13.0.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-react-inline-elements": "^7.9.0",
-    "@bhuone-garbu/eslint-config": "^1.0.2",
-    "@bhuone-garbu/prettier-config": "^1.0.0",
-    "@bhuone-garbu/stylelint-config": "^1.0.0",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.0.1",
-    "babel-plugin-styled-components": "^1.10.7",
+    "@types/node": "14.0.1",
+    "@types/react": "16.9.35",
+    "@types/styled-components": "5.1.0",
+    "@types/validator": "13.0.0",
+    "@typescript-eslint/eslint-plugin": "2.33.0",
+    "babel-plugin-styled-components": "1.10.7",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.9.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
+    "eslint-config-airbnb-typescript": "7.2.1",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jest": "23.13.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.3",
+    "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "husky": "^4.2.5",
-    "prettier": "^1.19.1",
-    "stylelint": "^13.3.3",
-    "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-order": "^4.0.0"
+    "husky": "4.2.5",
+    "jest": "26.0.1",
+    "prettier": "2.0.5",
+    "rimraf": "3.0.2",
+    "stylelint": "13.3.3",
+    "stylelint-config-prettier": "8.0.1",
+    "stylelint-config-recommended": "3.0.0",
+    "stylelint-order": "4.0.0",
+    "typescript": "3.9.2"
   }
 }

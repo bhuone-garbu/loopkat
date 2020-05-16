@@ -3,13 +3,26 @@
   "env": {
     "development": {
       "plugins": [
-        ["babel-plugin-styled-components", { "fileName": false }]
+        [
+          "babel-plugin-styled-components",
+          {
+            "displayName": true,
+            "fileName": false,
+            "ssr": true
+          }
+        ]
       ]
     },
     "production": {
       "plugins": [
-        "@babel/plugin-transform-react-inline-elements",
-        ["babel-plugin-styled-components", { "displayName": false }]
+        [
+          "babel-plugin-styled-components",
+          {
+            "displayName": false,
+            "fileName": false,
+            "ssr": true
+          }
+        ]
       ]
     }
   }
