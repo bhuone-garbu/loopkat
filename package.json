@@ -11,7 +11,7 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "stylelint": "stylelint 'src/**/*.ts'",
-    "eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "eslint": "eslint --ext .js, .jsx, .ts, .tsx .",
     "lint": "npm run typescript && npm run eslint && npm run stylelint"
   },
   "husky": {

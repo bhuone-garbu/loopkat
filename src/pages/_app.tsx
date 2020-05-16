@@ -2,53 +2,61 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { ThemeProvider, createGlobalStyle, css } from 'styled-components';
 
 import theme from '../styles/theme';
 import { typographyRegular, typographyHeading } from '../styles/mixins';
 import withApollo from '../utils/withApollo';
 import { MainLayout } from '../components';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: typeof theme }>(
+  p => css`
+    html {
+      font-size: 62.5%;
+    }
 
-  html {
-    font-size: 62.5%;
-  }
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
 
-  *, *:before, *:after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
+    body {
+      ${typographyRegular}
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      background: ${p.theme.colors.white};
+    }
 
-  body {
-    ${typographyRegular}
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    background: ${p => p.theme.colors.white};
-  }
+    a,
+    ul,
+    li {
+      color: currentColor;
+      text-decoration: none;
+    }
 
-  a, ul, li {
-    color: currentColor;
-    text-decoration: none;
-  }
+    h1,
+    h2,
+    h3,
+    h4 {
+      ${typographyHeading};
+      margin-top: 1rem;
+      color: ${p.theme.colors.secondary};
+    }
 
-  h1, h2, h3, h4 {
-    ${typographyHeading};
-    margin-top: 1rem;
-    color: ${p => p.theme.colors.secondary};
-  }
+    h1 {
+      font-size: 2.4rem;
+    }
 
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-`;
+    h2 {
+      font-size: 1.8rem;
+    }
+  `,
+);
 
 interface Props extends AppProps {
   apollo: ApolloClient<any>;
