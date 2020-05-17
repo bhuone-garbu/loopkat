@@ -39,8 +39,8 @@ export const InputRangeStyled = styled.input<InputProps>(
       to right,
       ${p.theme.colors.primary} 0%,
       ${p.theme.colors.primary} ${p.percentComplete}%,
-      ${p.theme.colors.greyLighter} ${p.percentComplete}%,
-      ${p.theme.colors.greyLighter} 100%
+      ${p.theme.colors.greyLight} ${p.percentComplete}%,
+      ${p.theme.colors.greyLight} 100%
     );
     border-radius: ${p.theme.fields.borderRadius};
     outline: none;
@@ -111,7 +111,7 @@ export const SlideListItem = styled.li<SlideListProps>(
     width: 2.25rem;
     height: 2.25rem;
     list-style: none;
-    background: ${p.theme.colors.greyLighter};
+    background: ${p.theme.colors.greyLight};
     background: ${p.complete && p.theme.colors.primary};
     border-radius: 50%;
   `,

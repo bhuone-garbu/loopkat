@@ -3,14 +3,15 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 // from nextjs docs
-class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+class MyDocument extends Document<any> {
+  static async getInitialProps(ctx: any) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App: any) => (props: any) =>
+            sheet.collectStyles(<App {...props} />),
         });
       const initialProps = await Document.getInitialProps(ctx);
       return {
@@ -41,7 +42,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Baloo+2:400|Biryani:400,700|Montserrat:500,700&display=swap"
             rel="stylesheet"
           />
-          <script crossOrigin="anonymous" src="https://kit.fontawesome.com/802a2035bb.js" />
+          <script
+            crossOrigin="anonymous"
+            src="https://kit.fontawesome.com/802a2035bb.js"
+          />
         </Head>
         <body>
           <Main />

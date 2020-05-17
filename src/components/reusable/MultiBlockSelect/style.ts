@@ -35,10 +35,10 @@ export const GridItem = styled.div<GridItemProps>(
     }
 
     ${p.isSelected &&
-      css`
-        color: ${p.theme.colors.white};
-        background: ${p.theme.colors.blue};
-        transform: scale(0.95);
-      `};
+    css`
+      color: ${p.theme.colors.white};
+      background: ${p.theme.colors.blue};
+      transform: scale(0.95);
+    `};
   `,
 );

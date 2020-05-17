@@ -16,7 +16,8 @@ export const InputStyled = styled.input.attrs(p => ({
   padding: 0 1rem;
   color: ${p => p.theme.colors.grey};
   font-size: 1.8rem;
-  border: ${p => p.theme.fields.borderSize} solid ${p => p.theme.colors.greyLight};
+  border: ${p => p.theme.fields.borderSize} solid
+    ${p => p.theme.colors.greyLight};
   border-radius: ${p => p.theme.fields.borderRadius};
   opacity: ${p => p.isDisabled && '0.5'};
 

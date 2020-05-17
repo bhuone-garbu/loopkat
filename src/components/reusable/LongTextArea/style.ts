@@ -9,7 +9,8 @@ export const TextAreaStyled = styled.textarea.attrs(p => ({
   ${resetInput};
   width: 100%;
   padding: 1rem;
-  border: ${p => p.theme.fields.borderSize} solid ${p => p.theme.colors.greyLight};
+  border: ${p => p.theme.fields.borderSize} solid
+    ${p => p.theme.colors.greyLight};
   border-radius: ${p => p.theme.fields.borderRadius};
   resize: vertical;
 

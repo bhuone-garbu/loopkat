@@ -6,6 +6,7 @@ import {
   Input,
   MultiBlockSelect,
   Select,
+  SliderInput,
 } from '../reusable';
 
 import {
@@ -73,6 +74,10 @@ const ShareJourney = () => {
           </QuestionInputWrapper>
         </QuestionWrapper>
       </FormStyled>
+
+      <QuestionWrapper>
+        <SliderInput name="hello" />
+      </QuestionWrapper>
 
       <ResponsiveAnchor href="/discover/places">
         <Button stretch value="Next" />

@@ -17,10 +17,10 @@ export const Wrapper = styled.div<WrapperProps>(
     border-radius: ${p.theme.fields.borderRadius};
 
     ${p.stretch &&
-      css`
-        width: 100%;
-        margin: 0;
-      `}
+    css`
+      width: 100%;
+      margin: 0;
+    `}
 
     &:hover {
       border-color: ${p.theme.colors.black};

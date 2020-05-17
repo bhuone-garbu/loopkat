@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import {
   LabelCross,
@@ -19,8 +19,6 @@ interface Props {
   options: Array<Option>;
 }
 
-type CEvent = ChangeEvent<HTMLInputElement>;
-
 // TODO: code needs optimization
 const MultiSelect = ({ options }: Props) => {
   const [isOptionVisible, setIsOptionVisible] = useState(false);
@@ -32,7 +30,8 @@ const MultiSelect = ({ options }: Props) => {
   const optionRef = useRef<HTMLInputElement>(null);
   const selectRef = useRef<HTMLInputElement>(null);
 
-  const invertOptionVisibility = ({ target }: Event) => {
+  // use any as type cuz I can't quite figure out the types
+  const invertOptionVisibility = ({ target }: any) => {
     if (selectRef.current && selectRef.current.isSameNode(target)) {
       setIsOptionVisible(!isOptionVisible);
     }

@@ -67,13 +67,13 @@ const PlaceTinder = ({ activities, destination, totalDays }: Props) => {
 
         <ActionWrapper>
           <Action bgColor={colors.redLight}>
-            <i className="fas fa-thumbs-down fa-3x" />
+            <i className="fas fa-thumbs-down fa-2x" />
           </Action>
           <BackAction bgColor={colors.greyLighter}>
             <i className="fas fa-step-backward fa-2x" />
           </BackAction>
           <Action bgColor={colors.green}>
-            <i className="fas fa-thumbs-up fa-3x" />
+            <i className="fas fa-thumbs-up fa-2x" />
           </Action>
         </ActionWrapper>
 
